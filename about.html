@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Running Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Elevate Running Club | Our Mission & Team</title>
+    <meta name="description"
+        content="Learn about the Elevate Running Club's mission, our passionate team leaders, and our weekly training schedule. Join our community of runners in [Your City].">
+    <meta name="keywords"
+        content="running club, about us, weekly run schedule, team leaders, community running, fitness, health">
+    <meta name="author" content="Elevate Running Club">
+
+    <!-- Open Graph tags for Social Media Sharing -->
+    <meta property="og:title" content="About Us - Elevate Running Club">
+    <meta property="og:description"
+        content="Discover our mission, meet the team, and view our weekly running schedule.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.yourrunningclub.com/about.html">
+    <!-- <meta property="og:image" content="http://www.yourrunningclub.com/images/team-photo.jpg"> -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="logo-banner">🏃‍♂ Running Club</div>
+
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h1>About Our Club</h1>
+            <p>Our running club was founded 2025, by a solo runner and now it has grown to a community of active
+                members.
+            </p>
+            <p>Our Running Club brings together runners of all levels to promote health, fitness, and community spirit.
+                We host weekly runs, marathons, and training programs for everyone.</p>
+
+
+            <h2>Our mission</h2>
+            <p>Our misson is to promote running as a way to improve physical and mental
+                wellbeing while building meaningful connections.
+            </p>
+            <h3>What we believe</h3>
+            <p>We believe that running is for everyone , regardless of speed or experience.Our inclusive
+                approach ensures that every member feels supported and encouraged to reach their personal goals.
+            </p>
+        </div>2
+        <!-- Weekly Schedule Section -->
+        <section class="schedule">
+            <h2>Weekly Training Schedule</h2>
+            <p>Join us during the week for our regular training runs. Everyone is welcome!</p>
+            <!-- Add this right after <p>Join us during the week...</p> -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Runs</button>
+                <button class="filter-btn" data-filter="3">3km</button>
+                <button class="filter-btn" data-filter="5">5km</button>
+                <button class="filter-btn" data-filter="8">8km</button>
+                <button class="filter-btn" data-filter="10">10km</button>
+                <button class="filter-btn" data-filter="20">20km</button>
+            </div>
+
+            <!-- ... your existing table code ... -->
+
+            </table>
+        </section>
+
+        <!-- Add this script just before the closing </body> tag -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const tableRows = document.querySelectorAll('.schedule-table tbody tr');
+
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                        this.classList.add('active');
+
+                        const filterValue = this.getAttribute('data-filter');
+
+                        tableRows.forEach(row => {
+                            if (filterValue === 'all') {
+                                row.style.display = '';
+                            } else {
+
+                                if (row.getAttribute('data-distance').includes(filterValue)) {
+                                    row.style.display = '';
+                                } else {
+                                    row.style.display = 'none';
+                                }
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Number of killometers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Saturday</td>
+                    <td>6:30 AM</td>
+                    <td>5km ,10km, 20km</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>6:00 PM</td>
+                    <td>5km , 8km</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>6:00 PM</td>
+                    <td>3km , 5km</td>
+                </tr>
+            </tbody>
+        </table>
+        </section>
+
+
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="images/pic8.jpg" alt="Gontse">
+                <p>Team leader</p>
+            </div>
+            <div class="team-member">
+                <img src="images/pic11.jpg" alt="Gabriel ">
+                <p>Team leader</p>
+            </div>
+            <div class="team-member">
+                <img src="images/teamleader.jpg" alt="olinah ">
+                <p>Team leader</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Running Club. All Rights Reserved.</p>
+        <div class="social">
+
+            <a href="https://tiktok.com/@elevateasonerun">TIKTOK</a>
+            <a href="https://facebook.com/@elevateasonerun">FACEBOOK</a>
+            <a href="https://instagram.com/@elevateasonerun">INSTAGRAM</a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

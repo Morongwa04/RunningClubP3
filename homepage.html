@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Running Club - Join Our Community | Weekly Runs & Events</title>
+    <meta name="description"
+        content="Join Elevate Running Club! Weekly group runs, training programs, and community events for runners of all levels in Cape Town.">
+    <meta name="keywords" content="running club, group runs, fitness, community running, Cape Town, marathon training">
+    <meta name="author" content="Elevate Running Club">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Add this in your main content------>
+<section class="testimonial-slider">
+    <h2>What Our Runners Say</h2>
+    <div class="slider-container">
+        <div class="slide active">
+            <p>"This club changed my life! I went from being a bed rotter to a marathon runner."</p>
+            <span>- Sihle Gumede.</span>
+        </div>
+        <div class="slide">
+            <p>"The community support is incredible. Everyone motivates each other!"</p>
+            <span>- Angel Mohlahlo.</span>
+        </div>
+        <div class="slide">
+            <p>"Best decision I ever made. The Saturday runs are my highlight!"</p>
+            <span>- Mbali Khumalo.</span>
+        </div>
+    </div>
+    <div class="slider-controls">
+        <button class="prev-btn">←</button>
+        <button class="next-btn">→</button>
+    </div>
+</section>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+    });
+</script>
+
+<body>
+    <!--Animated Running Club Name -->
+    <div class="animated-name">🏃‍♂ Elevate as one</div>
+
+    <!-- Colorful Sections -->
+    <section class="color-section pink">
+        <h2>Welcome To Elevate As One Run</h2>
+        <p>One Stride,One Goal,Elevate As One</p>
+    </section>
+
+    <section class="color-section yellow">
+        <h2>Events & Training</h2>
+        <p>We organize weekly runs and special events for all levels.</p>
+    </section>
+
+    <section class="color-section orange">
+        <h2>Join Us Today!</h2>
+        <p>Sign up and become part of our healthy and active community.</p>
+        <a href="contacts.html" class="btn">Sign Up</a>
+    </section>
+    <!-- Logo Banner -->
+    <div class="logo-banner">🏃‍♂ Elevate as one running club</div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="homepage.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>ELEVATE AS ONE</h1>
+        <p>One stride, one goal ,elevate as one</p>
+        <a href="contacts.html" class="btn">Join Now</a>
+    </section>
+    <section class="video-section">
+        <h2>ELEVATORS AURA ELEVATORS AURA ELEVATORS AURA ELEVATORS AURA ELEVATORS AURA ELEVATORS AURA
+
+        </h2>
+        <video controls autoplay muted loop>
+            <source src="video/video.html.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+    </section>
+
+    <!-- About Preview -->
+    <main>
+        <div class="card">
+            <h2>About Us</h2>
+            <p>We are passionate runners who organize weekly runs, races, and community events for all levels.</p>
+            <a href="about.html" class="btn-small">Learn More</a>
+        </div>
+
+
+        <!-- Upcoming Events -->
+        <h2>Upcoming Events</h2>
+        <div class="gallery-item yellow">
+            <p>No upcoming events for now !</p>
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Elevate as one running club. All Rights Reserved.</p>
+        <div class="social">
+            <a href="https://tiktok.com/@elevateasonerun">TIKTOK</a>
+            <a href="https://facebook.com/@elevateasonerun">FACEBOOK</a>
+            <a href="https://instagram.com/@elevateasonerun">INSTAGRAM</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
